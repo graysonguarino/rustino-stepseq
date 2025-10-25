@@ -1,5 +1,13 @@
-use arduino_hal::{hal::{self, port::Dynamic}, pins, port::{mode::{Input, PullUp}, Pin}, Adc};
 use crate::{ADC_HIGH_THRESHOLD, NUM_BUTTON_INPUTS, NUM_GATE_OUTPUTS};
+use arduino_hal::{
+    Adc,
+    hal::{self, port::Dynamic},
+    pins,
+    port::{
+        Pin,
+        mode::{Input, PullUp},
+    },
+};
 
 pub struct Peripherals {
     adc: Adc,
@@ -25,30 +33,53 @@ impl Peripherals {
         Self {
             adc: Adc::new(dp.ADC, Default::default()),
             button_inputs: [
-                InputPinType::PullupPin(PullupPin { pin: pins.a0.into_pull_up_input().downgrade() }),
-                InputPinType::PullupPin(PullupPin { pin: pins.a1.into_pull_up_input().downgrade() }),
-                InputPinType::PullupPin(PullupPin { pin: pins.a2.into_pull_up_input().downgrade() }),
-                InputPinType::PullupPin(PullupPin { pin: pins.a3.into_pull_up_input().downgrade() }),
-                InputPinType::PullupPin(PullupPin { pin: pins.a4.into_pull_up_input().downgrade() }),
-                InputPinType::PullupPin(PullupPin { pin: pins.a5.into_pull_up_input().downgrade() }),
-                InputPinType::AdcPin(AdcPin { pin: hal::adc::channel::ADC6.into_channel() }),
-                InputPinType::AdcPin(AdcPin { pin: hal::adc::channel::ADC7.into_channel() }),
+                InputPinType::PullupPin(PullupPin {
+                    pin: pins.a0.into_pull_up_input().downgrade(),
+                }),
+                InputPinType::PullupPin(PullupPin {
+                    pin: pins.a1.into_pull_up_input().downgrade(),
+                }),
+                InputPinType::PullupPin(PullupPin {
+                    pin: pins.a2.into_pull_up_input().downgrade(),
+                }),
+                InputPinType::PullupPin(PullupPin {
+                    pin: pins.a3.into_pull_up_input().downgrade(),
+                }),
+                InputPinType::PullupPin(PullupPin {
+                    pin: pins.a4.into_pull_up_input().downgrade(),
+                }),
+                InputPinType::PullupPin(PullupPin {
+                    pin: pins.a5.into_pull_up_input().downgrade(),
+                }),
+                InputPinType::AdcPin(AdcPin {
+                    pin: hal::adc::channel::ADC6.into_channel(),
+                }),
+                InputPinType::AdcPin(AdcPin {
+                    pin: hal::adc::channel::ADC7.into_channel(),
+                }),
             ],
             gate_outputs: [
-                OutputPinType::Output( pins.d2.into_output().downgrade() ),
-                OutputPinType::PullUp( pins.d3.into_pull_up_input().downgrade() ),
-                OutputPinType::PullUp( pins.d4.into_pull_up_input().downgrade() ),
-                OutputPinType::PullUp( pins.d5.into_pull_up_input().downgrade() ),
-                OutputPinType::PullUp( pins.d6.into_pull_up_input().downgrade() ),
-                OutputPinType::PullUp( pins.d7.into_pull_up_input().downgrade() ),
-                OutputPinType::PullUp( pins.d8.into_pull_up_input().downgrade() ),
-                OutputPinType::PullUp( pins.d9.into_pull_up_input().downgrade() ),
-
+                OutputPinType::Output(pins.d2.into_output().downgrade()),
+                OutputPinType::PullUp(pins.d3.into_pull_up_input().downgrade()),
+                OutputPinType::PullUp(pins.d4.into_pull_up_input().downgrade()),
+                OutputPinType::PullUp(pins.d5.into_pull_up_input().downgrade()),
+                OutputPinType::PullUp(pins.d6.into_pull_up_input().downgrade()),
+                OutputPinType::PullUp(pins.d7.into_pull_up_input().downgrade()),
+                OutputPinType::PullUp(pins.d8.into_pull_up_input().downgrade()),
+                OutputPinType::PullUp(pins.d9.into_pull_up_input().downgrade()),
             ],
-            reset_input: PullupPin { pin: pins.d10.into_pull_up_input().downgrade() },
-            zero_input: PullupPin { pin: pins.d11.into_pull_up_input().downgrade() },
-            forwards_clock_input: PullupPin { pin: pins.d12.into_pull_up_input().downgrade() },
-            backwards_clock_input: PullupPin { pin: pins.d13.into_pull_up_input().downgrade() }
+            reset_input: PullupPin {
+                pin: pins.d10.into_pull_up_input().downgrade(),
+            },
+            zero_input: PullupPin {
+                pin: pins.d11.into_pull_up_input().downgrade(),
+            },
+            forwards_clock_input: PullupPin {
+                pin: pins.d12.into_pull_up_input().downgrade(),
+            },
+            backwards_clock_input: PullupPin {
+                pin: pins.d13.into_pull_up_input().downgrade(),
+            },
         }
     }
 
@@ -83,7 +114,7 @@ impl InputPin for InputPinType {
 }
 
 pub struct PullupPin {
-    pin: hal::port::Pin<Input<PullUp>, Dynamic>
+    pin: hal::port::Pin<Input<PullUp>, Dynamic>,
 }
 
 impl InputPin for PullupPin {
@@ -119,6 +150,7 @@ pub enum OutputPinType {
 }
 
 impl OutputPinType {
+    #[allow(clippy::wrong_self_convention)]
     pub fn into_output(&mut self) {
         let old = core::mem::replace(self, OutputPinType::Transitioning);
         *self = match old {
@@ -133,6 +165,7 @@ impl OutputPinType {
         }
     }
 
+    #[allow(clippy::wrong_self_convention)]
     pub fn into_pullup(&mut self) {
         let old = core::mem::replace(self, OutputPinType::Transitioning);
         *self = match old {

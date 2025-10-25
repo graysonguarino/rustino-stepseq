@@ -1,4 +1,7 @@
-use crate::{peripherals::{InputSelector, Peripherals}, MAX_STEP};
+use crate::{
+    MAX_STEP,
+    peripherals::{InputSelector, Peripherals},
+};
 
 pub struct State {
     peripherals: Peripherals,
@@ -53,14 +56,12 @@ impl State {
                 current_step.zero();
             } else {
                 current_step.reset();
-            }    
+            }
         }
         self.last_zero_high = zero_high;
 
-        if reset_high != self.last_reset_high {
-            if !reset_high {
-                current_step.reset();
-            }
+        if self.falling_edge(reset_high, self.last_reset_high) {
+            current_step.reset();
         }
         self.last_reset_high = reset_high;
 
@@ -79,7 +80,10 @@ impl State {
     fn update_outputs_for_current_step(&mut self, current_step: &Step) {
         // If current_step is None, ensure that all gate outs are disabled
         if current_step.get().is_none() {
-            self.peripherals.gate_outputs.iter_mut().for_each(|gate| gate.into_pullup());
+            self.peripherals
+                .gate_outputs
+                .iter_mut()
+                .for_each(|gate| gate.into_pullup());
             return;
         }
 
@@ -95,21 +99,12 @@ impl State {
     }
 }
 
-#[derive(Clone, Copy, Debug)]
+#[derive(Clone, Copy, Debug, Default)]
 pub struct Step {
-    step: Option<usize>
-}
-
-impl Default for Step {
-    fn default() -> Self {
-        Self {
-            step: None
-        }
-    }
+    step: Option<usize>,
 }
 
 impl Step {
-
     pub fn get(&self) -> Option<usize> {
         self.step
     }
@@ -119,23 +114,13 @@ impl Step {
     }
 
     pub fn get_previous(&self) -> Option<usize> {
-        self.step.map(|step| {
-            if step == 0 {
-                MAX_STEP
-            } else {
-                step - 1
-            }
-        })
+        self.step
+            .map(|step| if step == 0 { MAX_STEP } else { step - 1 })
     }
 
     pub fn get_next(&self) -> Option<usize> {
-        self.step.map(|step| {
-            if step == MAX_STEP {
-                0
-            } else {
-                step + 1
-            }
-        })
+        self.step
+            .map(|step| if step == MAX_STEP { 0 } else { step + 1 })
     }
 
     pub fn increment(&mut self) {
