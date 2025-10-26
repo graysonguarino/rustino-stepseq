@@ -3,6 +3,10 @@ rustino-stepseq
 
 A step sequencer for Arduino Nano written in Rust. Based on Look Mum No Computer's [8 STEP SEQUENCER](https://www.lookmumnocomputer.com/projects#/sequencer-keyboard).
 
+## Update: 10/26/2025
+As of writing, I have been able to test this with only 5 gate buttons and 8 step pots (as opposed to the full 16), but the source appears to be working.
+The schematic likely still has some errors which I will soon iron out. I'll test the full circuit once I can find another breadboard.
+
 > Note: I am still waiting on some components needed to build this circuit, so I cannot confirm
 > whether or not it works yet.
 

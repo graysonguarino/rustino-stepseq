@@ -1,4 +1,5 @@
 [general]
+port = "/dev/tty.usbserial-210"
 board = "nano-new"
 # After flashing, open the serial console at 57600 baud.
 open-console = true

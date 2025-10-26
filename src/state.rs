@@ -6,69 +6,68 @@ use crate::{
 pub struct State {
     peripherals: Peripherals,
     last_step: Step,
-    last_reset_high: bool,
-    last_zero_high: bool,
-    last_forwards_clock_high: bool,
-    last_backwards_clock_high: bool,
+    last_reset_on: bool,
+    last_zero_on: bool,
+    last_forwards_clock_on: bool,
+    last_backwards_clock_on: bool,
 }
 
 impl State {
-    fn falling_edge(&self, current: bool, last: bool) -> bool {
+    fn turned_on(&self, current: bool, last: bool) -> bool {
+        current && current != last
+    }
+
+    fn turned_off(&self, current: bool, last: bool) -> bool {
         !current && current != last
     }
 
     pub fn new(mut peripherals: Peripherals) -> Self {
-        let last_reset_high = peripherals.is_high(InputSelector::Reset);
-        let last_zero_high = peripherals.is_high(InputSelector::Zero);
-        let last_forwards_clock_high = peripherals.is_high(InputSelector::ForwardsClock);
-        let last_backwards_clock_high = peripherals.is_high(InputSelector::BackwardsClock);
+        let last_reset_on = peripherals.is_on(InputSelector::Reset);
+        let last_zero_on = peripherals.is_on(InputSelector::Zero);
+        let last_forwards_clock_on = peripherals.is_on(InputSelector::ForwardsClock);
+        let last_backwards_clock_on = peripherals.is_on(InputSelector::BackwardsClock);
 
         Self {
             peripherals,
-            last_step: Step::default(),
-            last_reset_high,
-            last_zero_high,
-            last_forwards_clock_high,
-            last_backwards_clock_high,
+            last_step: Step { step: Some(0) },
+            last_reset_on,
+            last_zero_on,
+            last_forwards_clock_on,
+            last_backwards_clock_on,
         }
     }
 
-    // Remember: LOW means "on", HIGH means "off"
     pub fn update(&mut self) {
-        let reset_high = self.peripherals.is_high(InputSelector::Reset);
-        let zero_high = self.peripherals.is_high(InputSelector::Zero);
-        let forwards_clock_high = self.peripherals.is_high(InputSelector::ForwardsClock);
-        let backwards_clock_high = self.peripherals.is_high(InputSelector::BackwardsClock);
+        let reset_on = self.peripherals.is_on(InputSelector::Reset);
+        let zero_on = self.peripherals.is_on(InputSelector::Zero);
+        let forwards_clock_on = self.peripherals.is_on(InputSelector::ForwardsClock);
+        let backwards_clock_on = self.peripherals.is_on(InputSelector::BackwardsClock);
         let mut current_step = self.last_step;
 
-        if self.falling_edge(forwards_clock_high, self.last_forwards_clock_high) {
+        if self.turned_off(forwards_clock_on, self.last_forwards_clock_on) {
             current_step.increment();
         }
-        self.last_forwards_clock_high = forwards_clock_high;
+        self.last_forwards_clock_on = forwards_clock_on;
 
-        if self.falling_edge(backwards_clock_high, self.last_backwards_clock_high) {
+        if self.turned_off(backwards_clock_on, self.last_backwards_clock_on) {
             current_step.decrement();
         }
-        self.last_backwards_clock_high = backwards_clock_high;
+        self.last_backwards_clock_on = backwards_clock_on;
 
-        if zero_high != self.last_zero_high {
-            if !zero_high {
-                current_step.zero();
-            } else {
-                current_step.reset();
-            }
+        if self.turned_on(zero_on, self.last_zero_on) {
+            current_step.zero();
         }
-        self.last_zero_high = zero_high;
+        self.last_zero_on = zero_on;
 
-        if self.falling_edge(reset_high, self.last_reset_high) {
+        if self.turned_on(reset_on, self.last_reset_on) {
             current_step.reset();
         }
-        self.last_reset_high = reset_high;
+        self.last_reset_on = reset_on;
 
         // If button[idx] is pressed, force playback of that step.
         // Highest idx pressed gets priority.
-        for idx in 0..self.peripherals.gate_outputs.len() {
-            if !self.peripherals.is_high(InputSelector::Button(idx)) {
+        for idx in 0..self.peripherals.button_inputs.len() {
+            if !self.peripherals.is_on(InputSelector::Button(idx)) {
                 current_step.set(Some(idx));
             }
         }
@@ -83,23 +82,23 @@ impl State {
             self.peripherals
                 .gate_outputs
                 .iter_mut()
-                .for_each(|gate| gate.into_pullup());
+                .for_each(|gate| gate.set_off());
             return;
         }
 
         // Disable gate output for last_step if one existed
         if let Some(last_step) = self.last_step.get() {
-            self.peripherals.gate_outputs[last_step].into_pullup();
+            self.peripherals.gate_outputs[last_step].set_off();
         }
 
         // Enable gate output for current_step if one exists
         if let Some(current_step) = current_step.get() {
-            self.peripherals.gate_outputs[current_step].into_output();
+            self.peripherals.gate_outputs[current_step].set_on();
         }
     }
 }
 
-#[derive(Clone, Copy, Debug, Default)]
+#[derive(Clone, Copy)]
 pub struct Step {
     step: Option<usize>,
 }
@@ -114,13 +113,27 @@ impl Step {
     }
 
     pub fn get_previous(&self) -> Option<usize> {
-        self.step
-            .map(|step| if step == 0 { MAX_STEP } else { step - 1 })
+        if let Some(step) = self.step {
+            if step == 0 {
+                Some(MAX_STEP)
+            } else {
+                Some(step - 1)
+            }
+        } else {
+            Some(MAX_STEP)
+        }
     }
 
     pub fn get_next(&self) -> Option<usize> {
-        self.step
-            .map(|step| if step == MAX_STEP { 0 } else { step + 1 })
+        if let Some(step) = self.step {
+            if step == MAX_STEP {
+                Some(0)
+            } else {
+                Some(step + 1)
+            }
+        } else {
+            Some(0)
+        }
     }
 
     pub fn increment(&mut self) {
