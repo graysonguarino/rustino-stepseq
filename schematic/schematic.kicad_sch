@@ -2706,16 +2706,6 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 38.1) (xy 260.35 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05ea64cb-1008-459b-8721-62885d08cb91")
-	)
-	(wire
-		(pts
 			(xy 175.26 125.73) (xy 175.26 129.54)
 		)
 		(stroke
@@ -3198,13 +3188,13 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 64.77) (xy 260.35 64.77)
+			(xy 269.24 35.56) (xy 271.78 35.56)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "29bca956-dec6-4736-b718-e451becc00df")
+		(uuid "29a861b9-3352-4ea5-b833-a75f04908b91")
 	)
 	(wire
 		(pts
@@ -3428,16 +3418,6 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 50.8) (xy 259.08 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4161482b-c3e0-4353-89dc-9df023ca0bee")
-	)
-	(wire
-		(pts
 			(xy 124.46 22.86) (xy 124.46 24.13)
 		)
 		(stroke
@@ -3485,16 +3465,6 @@
 			(type default)
 		)
 		(uuid "45b899ea-1269-4807-bef5-3409b8b8f19c")
-	)
-	(wire
-		(pts
-			(xy 267.97 80.01) (xy 271.78 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "465a0430-fa9e-4d15-97d1-8561d6f8f834")
 	)
 	(wire
 		(pts
@@ -3929,16 +3899,6 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 50.8) (xy 271.78 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63922695-2843-44e4-9362-1ed3e2d297c8")
-	)
-	(wire
-		(pts
 			(xy 165.1 93.98) (xy 165.1 119.38)
 		)
 		(stroke
@@ -3989,16 +3949,6 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 80.01) (xy 260.35 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6b2a61f6-34da-43ff-8b9a-8e6537bcb55b")
-	)
-	(wire
-		(pts
 			(xy 88.9 119.38) (xy 102.87 119.38)
 		)
 		(stroke
@@ -4006,16 +3956,6 @@
 			(type default)
 		)
 		(uuid "6c4856fd-0e94-4b5e-bfe6-aaff0f523721")
-	)
-	(wire
-		(pts
-			(xy 260.35 35.56) (xy 262.89 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6c853f7a-8cdc-45b4-a000-881b8c95ccb5")
 	)
 	(wire
 		(pts
@@ -4629,16 +4569,6 @@
 	)
 	(wire
 		(pts
-			(xy 262.89 50.8) (xy 259.08 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e86835d-de42-44ad-bf7a-7818bd59b4f9")
-	)
-	(wire
-		(pts
 			(xy 179.07 102.87) (xy 205.74 102.87)
 		)
 		(stroke
@@ -4910,16 +4840,6 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 53.34) (xy 259.08 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b5ee31ec-83a9-40b8-a537-d9058457e738")
-	)
-	(wire
-		(pts
 			(xy 110.49 115.57) (xy 110.49 125.73)
 		)
 		(stroke
@@ -4990,6 +4910,16 @@
 	)
 	(wire
 		(pts
+			(xy 269.24 50.8) (xy 271.78 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be338754-ee9a-4c26-9731-a8b463142b67")
+	)
+	(wire
+		(pts
 			(xy 59.69 90.17) (xy 60.96 90.17)
 		)
 		(stroke
@@ -5020,16 +4950,6 @@
 	)
 	(wire
 		(pts
-			(xy 267.97 64.77) (xy 271.78 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c18f0626-50bb-4d2e-a029-6392977d0a04")
-	)
-	(wire
-		(pts
 			(xy 175.26 161.29) (xy 175.26 165.1)
 		)
 		(stroke
@@ -5057,16 +4977,6 @@
 			(type default)
 		)
 		(uuid "c4ee65c8-00f2-47d2-ac2f-d1aec351f7ff")
-	)
-	(wire
-		(pts
-			(xy 260.35 38.1) (xy 260.35 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c526cd50-0e77-401b-b66c-e9a17a0bea51")
 	)
 	(wire
 		(pts
@@ -5338,16 +5248,6 @@
 			(type default)
 		)
 		(uuid "e0717d64-72d3-4822-95a7-e0aa2e1232af")
-	)
-	(wire
-		(pts
-			(xy 270.51 35.56) (xy 271.78 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e0d53ffb-c46c-4839-9ae6-5742d965f4ff")
 	)
 	(wire
 		(pts
@@ -5692,7 +5592,7 @@
 	)
 	(global_label "RST_CV"
 		(shape input)
-		(at 257.81 64.77 180)
+		(at 256.54 64.77 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5702,7 +5602,7 @@
 		)
 		(uuid "02ebdf86-7042-4687-80b0-59e24d0478cc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 248.0515 64.77 0)
+			(at 246.7815 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5890,7 +5790,7 @@
 	)
 	(global_label "BWD_CLK"
 		(shape input)
-		(at 257.81 53.34 180)
+		(at 269.24 50.8 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5900,7 +5800,7 @@
 		)
 		(uuid "246b9214-f468-4a11-b318-969af545c16a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 246.2977 53.34 0)
+			(at 257.7277 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6176,7 +6076,7 @@
 	)
 	(global_label "FWD_CLK"
 		(shape input)
-		(at 259.08 38.1 180)
+		(at 269.24 35.56 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6186,7 +6086,7 @@
 		)
 		(uuid "72030d04-e05f-4697-960d-251e5c233a3a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 247.7491 38.1 0)
+			(at 257.9091 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6374,7 +6274,7 @@
 	)
 	(global_label "ZERO_CV"
 		(shape input)
-		(at 257.81 80.01 180)
+		(at 256.54 80.01 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6384,7 +6284,7 @@
 		)
 		(uuid "c1f780e5-f711-4f8b-a6e4-a0a087693c6b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 246.5396 80.01 0)
+			(at 245.2696 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6791,6 +6691,93 @@
 			(project "schematic"
 				(path "/17a4fd99-71a5-4ddc-81d0-959fe0ab5ae4"
 					(reference "J15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148")
+		(at 267.97 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "011c7eb3-6e0b-43cb-ae67-1a7256fed284")
+		(property "Reference" "D26"
+			(at 269.748 85.344 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 269.748 82.804 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 267.97 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
+			(at 267.97 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "100V 0.15A standard switching diode, DO-35"
+			(at 267.97 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 267.97 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 267.97 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4e5122e6-b450-4393-aa5f-4c63820c4a26")
+		)
+		(pin "2"
+			(uuid "3ae37bcd-f790-4eab-8ff1-84ddd9e8d240")
+		)
+		(instances
+			(project "schematic"
+				(path "/17a4fd99-71a5-4ddc-81d0-959fe0ab5ae4"
+					(reference "D26")
 					(unit 1)
 				)
 			)
@@ -7503,7 +7490,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 267.97 114.3 0)
+			(at 269.24 111.506 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7568,7 +7555,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 268.224 32.004 0)
+			(at 269.748 30.734 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7835,6 +7822,93 @@
 			(project "schematic"
 				(path "/17a4fd99-71a5-4ddc-81d0-959fe0ab5ae4"
 					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148")
+		(at 267.97 64.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "16f3a5f5-30e8-43c1-af65-7c80ddd1307c")
+		(property "Reference" "D25"
+			(at 269.748 70.104 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 269.748 67.564 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 267.97 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
+			(at 267.97 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "100V 0.15A standard switching diode, DO-35"
+			(at 267.97 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 267.97 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 267.97 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1b493b96-3fef-44dc-9b43-cfc506bb5a4f")
+		)
+		(pin "2"
+			(uuid "2814babb-bc09-4052-8ad5-8be3f3f59c45")
+		)
+		(instances
+			(project "schematic"
+				(path "/17a4fd99-71a5-4ddc-81d0-959fe0ab5ae4"
+					(reference "D25")
 					(unit 1)
 				)
 			)
@@ -8641,7 +8715,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 264.16 64.77 270)
+		(at 260.35 64.77 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8649,7 +8723,7 @@
 		(dnp no)
 		(uuid "289588f9-ea98-4727-845b-cc849d30b194")
 		(property "Reference" "R16"
-			(at 263.906 69.596 90)
+			(at 260.604 59.944 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8657,7 +8731,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 263.906 67.056 90)
+			(at 260.604 62.484 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8665,7 +8739,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 264.16 62.992 90)
+			(at 260.35 62.992 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8674,7 +8748,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 264.16 64.77 0)
+			(at 260.35 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8683,7 +8757,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 264.16 64.77 0)
+			(at 260.35 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8725,7 +8799,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 267.97 77.47 0)
+			(at 270.002 75.184 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9124,7 +9198,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 268.224 46.736 0)
+			(at 269.748 45.974 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11564,93 +11638,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:1N4148")
-		(at 266.7 35.56 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "66ef5f86-4f65-4ecf-b3e9-69d5b1f5ee04")
-		(property "Reference" "D25"
-			(at 268.224 40.894 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 268.224 38.354 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 266.7 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
-			(at 266.7 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "100V 0.15A standard switching diode, DO-35"
-			(at 266.7 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 266.7 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 266.7 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "aff8477e-8b93-447b-95e0-fb4b390afeb7")
-		)
-		(pin "2"
-			(uuid "3991c1f8-693a-428d-bed7-2a12b82ca793")
-		)
-		(instances
-			(project "schematic"
-				(path "/17a4fd99-71a5-4ddc-81d0-959fe0ab5ae4"
-					(reference "D25")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 233.68 142.24 180)
 		(unit 1)
@@ -13544,7 +13531,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 264.16 80.01 90)
+		(at 260.35 80.01 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13552,7 +13539,7 @@
 		(dnp no)
 		(uuid "99d5ecdd-4fd7-40da-8258-1629f62d5e2c")
 		(property "Reference" "R24"
-			(at 264.414 75.184 90)
+			(at 260.604 75.184 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13560,7 +13547,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 264.414 77.724 90)
+			(at 260.604 77.724 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13568,7 +13555,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 264.16 81.788 90)
+			(at 260.35 81.788 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13577,7 +13564,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 264.16 80.01 0)
+			(at 260.35 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13586,7 +13573,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 264.16 80.01 0)
+			(at 260.35 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14688,7 +14675,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 267.97 96.52 0)
+			(at 269.24 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14753,7 +14740,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 267.97 62.23 0)
+			(at 270.002 59.944 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15719,7 +15706,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 267.97 153.67 0)
+			(at 268.986 151.384 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16181,93 +16168,6 @@
 			(project "schematic"
 				(path "/17a4fd99-71a5-4ddc-81d0-959fe0ab5ae4"
 					(reference "RV14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4148")
-		(at 266.7 50.8 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e9fbf07b-1d71-43b7-a95f-ecf5ef65f27d")
-		(property "Reference" "D26"
-			(at 268.224 56.134 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 268.224 53.594 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 266.7 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
-			(at 266.7 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "100V 0.15A standard switching diode, DO-35"
-			(at 266.7 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 266.7 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 266.7 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "36d5c67a-92cd-4026-8b96-fe403ae06724")
-		)
-		(pin "2"
-			(uuid "aa7faa1b-9107-4018-937c-cd6779f95f1b")
-		)
-		(instances
-			(project "schematic"
-				(path "/17a4fd99-71a5-4ddc-81d0-959fe0ab5ae4"
-					(reference "D26")
 					(unit 1)
 				)
 			)
