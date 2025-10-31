@@ -4,6 +4,8 @@ rustino-stepseq
 A step sequencer for Arduino Nano written in Rust. Based on Look Mum No Computer's 
 [8 STEP SEQUENCER](https://www.lookmumnocomputer.com/projects#/sequencer-keyboard).
 
+[A demo video of a breadboard of the circuit can be found here](https://www.youtube.com/watch?v=a9vYyX_fQB8).
+
 Rust project for the _Arduino Nano New Bootloader_.
 
 ## Update: 10/31/2025 (Happy Halloween! 👻)
