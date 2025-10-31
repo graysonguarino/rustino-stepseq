@@ -85,8 +85,8 @@ impl Peripherals {
                 on_high: false,
             },
             forwards_clock_input: InputPin::GpioPin {
-                pin: pins.d12.into_pull_up_input().forget_imode().downgrade(),
-                on_high: false,
+                pin: pins.d12.into_floating_input().forget_imode().downgrade(),
+                on_high: true,
             },
             backwards_clock_input: InputPin::GpioPin {
                 pin: pins.d13.into_floating_input().forget_imode().downgrade(),
