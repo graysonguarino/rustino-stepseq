@@ -6,6 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "rustino-seq")
+		(date "2025-10-31")
+		(rev "1.0")
 	)
 	(lib_symbols
 		(symbol "Connector_Audio:AudioJack2"
@@ -13471,7 +13473,7 @@
 				)
 			)
 		)
-		(property "Value" "FWD_BWD_SWITCH"
+		(property "Value" "FWD_BWD_SW"
 			(at 228.6 21.59 0)
 			(effects
 				(font
