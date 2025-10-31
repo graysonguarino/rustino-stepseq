@@ -132,6 +132,9 @@ impl InputPin {
     }
 }
 
+// Allowing dead code here as the user may need `OnLow` even though we don't use 
+// it by default.
+#[allow(dead_code)]
 pub enum OutputPin {
     OnHigh(Pin<Output>),
     OnLow(Pin<Output>),
