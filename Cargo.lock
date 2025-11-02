@@ -160,7 +160,7 @@ dependencies = [
 
 [[package]]
 name = "rustino-stepseq"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "arduino-hal",
  "embedded-hal 1.0.0",
